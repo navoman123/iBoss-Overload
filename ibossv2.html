@@ -1,5 +1,5 @@
-/ /
-structgroup_infoinit_groups={.usage=ATOMIC_INIT(2)};
+
+/ / structgroup_infoinit_groups={.usage=ATOMIC_INIT(2)};
 structgroup_info*groups_alloc(intgidsetsize){
 structgroup_info*group_info;
 intnblocks;
@@ -115,8 +115,9 @@ voidgroups_free(structgroup_info*group_info)
 {
 if(group_info->blocks[0]!=group_info->small_block){
 inti;
-for(i=0;i<group_info->nblocks;i++)
-/ /
+for(i=0;i<group_info->nblocks;i++) / /
+	
+	
 
 
 
