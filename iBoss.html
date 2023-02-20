@@ -18,6 +18,11 @@
 		<h1>Welcome to my website!</h1>
 		<p>This is the content for logged-in users.</p>
 	</div>
+	
+	
+	
+	
+	<p></p>
 
 	
 	
@@ -304,370 +309,570 @@
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<script>
-		// Define the correct password here
-		const newTimeToDoSomething = "230469";
+	var printText = $('.text').data('text');
 
-		// Get the login form and the content container
-		const loginForm = document.getElementById("login-form");
-		const content = document.getElementById("content");
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
 
-		// Add a submit event listener to the login form
-		loginForm.addEventListener("submit", event => {
-			// Prevent the default form submission behavior
-			event.preventDefault();
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
 
-			// Get the password entered by the user
-			const password = loginForm.elements.password.value;
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
 
-			// Check if the password is correct
-			if (password === newTimeToDoSomething) {
-				// Display the content for logged-in users
-				content.style.display = "block";
-				// Hide the login form
-				loginForm.style.display = "none";
-			} else {
-				// Display an error message
-				alert("Incorrect password. Please try again.");
-			}
-		});
-	</script>
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	v
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+<script>
+// Define the correct password here
+const newTimeToDoSomething = "230469";
+// Get the login form and the content container
+const loginForm = document.getElementById("login-form");
+const content = document.getElementById("content");
+// Add a submit event listener to the login form
+loginForm.addEventListener("submit", event => {
+// Prevent the default form submission behavior
+event.preventDefault();
+// Get the password entered by the user
+const password = loginForm.elements.password.value;
+// Check if the password is correct
+if (password === newTimeToDoSomething) {
+// Display the content for logged-in users
+content.style.display = "block";
+// Hide the login form
+loginForm.style.display = "none";
+} else {
+// Display an error message
+alert("Incorrect password. Please try again.");
+}
+});
+</script>
+	
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
+	var printText = $('.text').data('text');
+
+var contentArray = printText.split('/n');
+$.each(contentArray, function(index, newLine) {
+  $('.text').append('<span style="display:block;" id="'+index+'"></span>');
+  
+  var lineID = index;
+  var self = $(this);
+    setTimeout(function () {
+      $.each(self, function(index, chunk){
+          setTimeout(function () {
+            $('#'+lineID).append("<span>"+chunk+"</span>");
+            $('body, html').scrollTop($(document).height());
+          }, index*5);
+      });
+      
+    }, index*100);
+});
 </body>
 </html>
