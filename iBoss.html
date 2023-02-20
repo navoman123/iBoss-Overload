@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel='stylesheet' hrf='iBoss.css'>
-  </head>
-  <body>
-    <input type='number' id='input' value='Enter Password here' onclick='this.select()'>
-    <button id='submit'>Submit Code</button>
-    <p id='output'></p>
-    <script>
-      var submit = document.getElementById("submit");
-      var input = document.getElementById("input");
-      var output = document.getElementById("output");
+<head>
+	<title>My Password-Protected Website</title>
+</head>
+<body>
 
-      submit.addEventListener('click', function(){
-        if (input.value == "230469"){
-          p.innerHTML = "javascript:%28async function%28%29%7Beval%28await%28await fetch%28"https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSpaceSaver%2FIngot-for-iBoss%40latest%2Fingot.js"%29%29.text%28%29%29%7D%29%28%29%3B";
-        }
-      });
-    </script>
-  </body>
+	<h1>iBoss</h1>
+
+	<form onsubmit="return checkLogin()">
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password"><br><br>
+		<input type="submit" value="Login">
+	</form>
+  
+  <p id='output'></p>
+
+	<script>
+		function checkLogin() {
+			var password = document.getElementById("password").value;
+      var output = document.getElementById("output").innerHTML;
+			if (password == "230469") {
+        output = "javascript:%28async function%28%29%7Beval%28await%28await fetch%28"https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSpaceSaver%2FIngot-for-iBoss%40latest%2Fingot.js"%29%29.text%28%29%29%7D%29%28%29%3B";
+				return true;
+			} else {
+				alert("Invalid password.");
+				return false;
+			}
+		}
+	</script>
+
+</body>
 </html>
